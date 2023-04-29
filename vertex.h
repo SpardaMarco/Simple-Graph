@@ -7,6 +7,13 @@
 
 class Vertex {
 public:
+
+    /*!
+    * @brief Creates a default vertex not to be used in a graph.
+    * @param id int identifier
+    */
+    Vertex();
+
     /*!
     * @brief Creates a vertex with given identifier.
     * @param id int identifier

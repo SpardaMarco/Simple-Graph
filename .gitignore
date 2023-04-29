@@ -36,3 +36,4 @@ out/
 .idea
 *.iml
 cmake-build-debug/
+main.cpp

@@ -1,5 +1,9 @@
 #include "vertex.h"
 
+Vertex::Vertex() {
+    id_ = -1;
+}
+
 Vertex::Vertex(int id){
     id_ = id;
 }
