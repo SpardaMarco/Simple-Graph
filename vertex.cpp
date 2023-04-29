@@ -51,3 +51,7 @@ void Vertex::setDist(double dist) {
 void Vertex::setPath(int path) {
     path_ = path;
 }
+
+void Vertex::addEdge(int dest, double weight) {
+    adj_.push_back(Edge(id_, dest, weight));
+}

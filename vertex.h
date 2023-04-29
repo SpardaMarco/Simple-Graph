@@ -21,6 +21,7 @@ public:
     void setProcessing(bool processing);
     void setDist(double dist);
     void setPath(int path);
+    void addEdge(int dest, double weight);
 protected:
     int id_;
     std::vector<Edge> adj_;
