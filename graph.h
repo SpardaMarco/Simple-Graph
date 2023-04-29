@@ -13,8 +13,8 @@ public:
 
     /*!
      * @brief Auxiliary function to find a vertex with a given ID.
-     * @param id identifier
-     * @param vertex where to place the vertex
+     * @param id int identifier
+     * @param vertex Vertex object where to place the vertex
      * @return true if found, false otherwise.
      */
     bool findVertex(const int &id, Vertex& vertex);
