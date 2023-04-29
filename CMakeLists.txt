@@ -7,4 +7,4 @@ include_directories(.)
 
 add_executable(Simple-Graph
         vertex.cpp
-        vertex.hpp graph.cpp graph.h)
+        vertex.h graph.cpp graph.h edge.cpp edge.h)

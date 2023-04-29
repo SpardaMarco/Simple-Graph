@@ -3,8 +3,7 @@
 
 #include <vector>
 #include <algorithm>
-
-class Edge;
+#include "edge.h"
 
 class Vertex {
 public:
@@ -14,16 +13,18 @@ public:
     bool isProcessing() const;
     double getDist() const;
     int getPath() const;
+    std::vector<Edge> getAdj() const;
+    std::vector<Edge>& getAdj();
 
     void setId(int id);
     void setVisited(bool visited);
-    void setProcesssing(bool processing);
+    void setProcessing(bool processing);
     void setDist(double dist);
     void setPath(int path);
 protected:
     int id_;
+    std::vector<Edge> adj_;
 
-    // Helpful fields
     bool visited_ = false;
     bool processing_ = false;
     double dist_ = 0;

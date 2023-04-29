@@ -1,7 +1,7 @@
 #ifndef SG_H
 #define SG_H
 
-#include "vertex.hpp"
+#include "vertex.h"
 
 template<typename T>
 class Graph {
