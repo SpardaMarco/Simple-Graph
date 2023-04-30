@@ -36,10 +36,6 @@ std::vector<Edge> &Vertex::getAdj() {
     return adj_;
 }
 
-void Vertex::setId(int id) {
-    id_ = id;
-}
-
 void Vertex::setVisited(bool visited) {
     visited_ = visited;
 }
