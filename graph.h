@@ -2,6 +2,7 @@
 #define SG_H
 
 #include "vertex.h"
+#include <stack>
 
 class Graph {
 public:
@@ -40,6 +41,13 @@ public:
     * @return number of vertex.
     */
     int getNumVertex() const;
+
+    /*!
+    * @brief Depth-First search example (iterative). Assumes that there is only one connected component.
+    * Time Complexity: O(|V| + |E|), |V| being the number of vertex and |E| the number of edges of the graph.
+    * @param source int identifies the starting point
+    */
+    void dfs(int source);
 
 protected:
     std::vector<Vertex> vertexVector_;
