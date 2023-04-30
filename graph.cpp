@@ -1,6 +1,5 @@
 #include "graph.h"
 #include <climits>
-#include <iostream>
 
 Graph::Graph(bool directed) {
     directed_ = directed;
@@ -57,6 +56,33 @@ void Graph::dfs(int source) {
             Vertex &nVertex = findVertex(n);
             if (!nVertex.isVisited())
                 stack.push(n);
+        }
+    }
+}
+
+void Graph::bfs(int source) {
+    for(Vertex& v : vertexVector_){
+        v.setPath(-1);
+        v.setDist(-1);
+        v.setProcessing(false);
+        v.setVisited(false);
+    }
+    std::queue<int> queue;
+    queue.push(source);
+
+    while (!queue.empty()) {
+        int currentVertex = queue.front();
+        queue.pop();
+        Vertex& vertex = findVertex(currentVertex);
+        if(vertex.isVisited()) continue;
+
+        vertex.setVisited(true);
+        std::vector<Edge> &edges = vertex.getAdj();
+        for (Edge &edge: edges) {
+            int n = edge.getDest();
+            Vertex &nVertex = findVertex(n);
+            if (!nVertex.isVisited())
+                queue.push(n);
         }
     }
 }
