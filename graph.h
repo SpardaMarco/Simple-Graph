@@ -51,7 +51,7 @@ public:
     void dfs(int source);
 
     /*!
-    * @brief Breath-First search example (iterative). Assumes that there is only one connected component.
+    * @brief Breadth-First search example (iterative). Assumes that there is only one connected component.
     * Time Complexity: O(|V| + |E|), |V| being the number of vertex and |E| the number of edges of the graph.
     * @param source int identifies the starting point
     */
